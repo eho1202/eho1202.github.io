@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap");
+
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
+.body {
+  background-color: white;
+  color: black;
+}
+
+.navbar {
+  background-color: #595959;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #878787;
+  color: black;
+  cursor: pointer;
+  transition-duration: all 0.3s ease 0s;
+}
+
+.navbar a.active {
+  background-color: #1abef4;
+  color: white;
+}
+
+.navbar button {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 14px 16px;
+  font-size: 17px;
+  transition-duration: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  background-color: #878787;
+  color: black;
+  border: none;
+}
+
+.darktheme {
+  background-color: #222222;
+  color: white;
+  border: none;
+}
+
+.navbar button i {
+  color: #262626;
+  font-size: 17px;
+}
+
+#todolist {
+  font-size: 18px;
+  margin-left: 50px;
+}
+
+#things {
+  margin-left: 50px;
+}
+
+#SI {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 50%;
+  margin-top: 15px;
+}

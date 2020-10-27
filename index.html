@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Equations so we don't Fail</title>
+  </head>
+  <body>
+    <h1>Welcome, Don't Fail : )</h1>
+    <div id="nav-placeholder">
+      <script>
+        $(function () {
+          $("#nav-placeholder").load("assets/navbar.html");
+        });
+      </script>
+    </div>
+    <h2 id="things">Things we gotta do this week</h2>
+    <ul id="todolist">
+      <li>CHY102 Ch. 15 - 16 iClickers, DSM</li>
+      <li>MTH141 Quiz 6</li>
+      <li>MTH140 Quiz 6</li>
+    </ul>
+    <script>
+      function retheme() {
+        var cc = document.body.className;
+        if (cc.indexOf("darktheme") > -1) {
+          document.body.className = cc.replace("darktheme", "");
+          if (opener) {
+            opener.document.body.className = cc.replace("darktheme", "");
+          }
+          localStorage.setItem("preferredmode", "light");
+        } else {
+          document.body.className += " darktheme";
+          if (opener) {
+            opener.document.body.className += " darktheme";
+          }
+          localStorage.setItem("preferredmode", "dark");
+        }
+      }
+      (function setThemeMode() {
+        var x = localStorage.getItem("preferredmode");
+        if (x == "dark") {
+          document.body.className += " darktheme";
+        }
+      })();
+    </script>
+  </body>
+</html>

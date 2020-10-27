@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>MTH140</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </head>
+  <body>
+    <h1>Calculus Equations</h1>
+    <div id="nav-placeholder">
+      <script>
+        $(function () {
+          $("#nav-placeholder").load("assets/navbar.html");
+        });
+      </script>
+    </div>
+    <script>
+      function retheme() {
+        var cc = document.body.className;
+        if (cc.indexOf("darktheme") > -1) {
+          document.body.className = cc.replace("darktheme", "");
+          if (opener) {
+            opener.document.body.className = cc.replace("darktheme", "");
+          }
+          localStorage.setItem("preferredmode", "light");
+        } else {
+          document.body.className += " darktheme";
+          if (opener) {
+            opener.document.body.className += " darktheme";
+          }
+          localStorage.setItem("preferredmode", "dark");
+        }
+      }
+      (function setThemeMode() {
+        var x = localStorage.getItem("preferredmode");
+        if (x == "dark") {
+          document.body.className += " darktheme";
+        }
+      })();
+    </script>
+  </body>
+</html>
