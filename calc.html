@@ -18,6 +18,39 @@
       async
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
     ></script>
+
+    <!-- KaTeX -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+      integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+      integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "\\[", right: "\\]", display: true },
+            { left: "$", right: "$", display: false },
+            { left: "\\(", right: "\\)", display: false },
+            { strict: false },
+          ],
+        });
+      });
+    </script>
   </head>
   <body>
     <h1>Calculus Equations</h1>
@@ -28,6 +61,175 @@
         });
       </script>
     </div>
+    <h2 class="heading2">Limit Laws</h2>
+    <p class="Middle" style="font-size: 17px">
+      $\text{Derivative Equation: }\displaystyle \lim\limits_{h\rightarrow
+      0}\frac{f(a+h)-f(a)}{h} \\ \text{} \\$ Suppose that c is a constant and
+      the limits $\\ \text{} \displaystyle \lim\limits_{x\rightarrow a}f(x)
+      \text{ and } \lim\limits_{x\rightarrow a}g(x) \text{ exist. Then: } \\
+      \text{} \\ 1. \lim\limits_{x\rightarrow a}[f(x) + g(x)] =
+      \lim\limits_{x\rightarrow a}f(x) + \lim\limits_{x\rightarrow a}g(x)
+      \hspace{10em} 6. \lim\limits_{x\rightarrow a}[f(x)]^n =
+      [\lim\limits_{x\rightarrow a}f(x)]^n\\ \text{} \\ 2.
+      \lim\limits_{x\rightarrow a}[f(x) - g(x)] = \lim\limits_{x\rightarrow
+      a}f(x) - \lim\limits_{x\rightarrow a}g(x) \hspace{17em} 7.
+      \lim\limits_{x\rightarrow a}c = c\\ \text{} \\ 3.
+      \lim\limits_{x\rightarrow a}[cf(x)] = c \lim\limits_{x\rightarrow a}f(x)
+      \hspace{23em} 8. \lim\limits_{x\rightarrow a}x = a \\ \text{} \\ 4.
+      \lim\limits_{x\rightarrow a}[f(x)g(x)] = \lim\limits_{x\rightarrow a}f(x)
+      \cdot \lim\limits_{x\rightarrow a}g(x) \hspace{7em} 9.
+      \lim\limits_{x\rightarrow a}x^n = a^n \text{ Where n is a (+)ve int}\\
+      \text{} \\ 5. \lim\limits_{x\rightarrow a}\frac{f(x)}{g(x)} =
+      \frac{\lim\limits_{x\rightarrow a}f(x)}{\lim\limits_{x\rightarrow a}g(x)}
+      \text{ if } \lim\limits_{x\rightarrow a}g(x) \not = 0 \hspace{5.5em} 10.
+      \lim\limits_{x\rightarrow a}\sqrt[a]{x} = \sqrt[n]{a} \text{ Where n is a
+      (+)ve int } \\ \hspace{20em}\text{(if n is even,
+      assume}\lim\limits_{x\rightarrow a}f(x) > 0) \\ \text{} \\ 11.
+      \lim\limits_{x\rightarrow a} \sqrt[a]{f(x)} =
+      \sqrt[n]{\lim\limits_{x\rightarrow a}f(x)} \text{ where n is a (+)ve int}
+      \\ \text{If n is even, assume }\lim\limits_{x\rightarrow a}f(x) > 0$
+    </p>
+    <hr width="auto" size="1" />
+
+    <h2 class="heading2">Summation</h2>
+    <p class="Middle" style="font-size: 17px">
+      <u>Properties of Summation</u> $ \displaystyle \\ 1. \sum_{i=1}^n ka_i = k
+      \sum_{i=1}^n a_i \\ \text{} \\ 2. \sum_{i=1}^{n} (a_i ± b_i) =
+      \sum_{i=1}^n a_i ± \sum_{i=1}^n\\ \text{} \\$ <u>Summation Formulas</u>$
+      \\ 1. \displaystyle\sum_{i=1}^n c = cn \hspace{8em} 2. \sum_{i=1}^n i =
+      \frac{n(n+1)}{2} \\ \text{} \\ 3. \sum_{i=1}^n i^2 =
+      \frac{n(n+1)(2n+1)}{6} \hspace{3em} 4. \sum_{i=1}^n
+      i^3=\frac{n^2(n+1)^2}{4}$
+    </p>
+
+    <hr width="auto" size="1" />
+
+    <h2 class="heading2">Integrals</h2>
+    <p class="Middle" style="font-size: 17px">
+      <u>Definite Integral of f from a to b</u> $\displaystyle \\ \text{}
+      \int_a^bf(x)dx = \lim\limits_{n\rightarrow \infty}\sum_{i=1}^n
+      f(c_i)\Delta x \\ \text{} \\$
+      <u>Properties of Definite Integrals</u> $\displaystyle \\ \text{} 1.
+      \int_{a}^{b} kf(x)dx = k\int_{a}^{b} f(x) dx \\ \text{} \\ 2. \int_{a}^{b}
+      [f(x) ± g(x)]dx = \int_{a}^{b}f(x)dx ± \int_{a}^{b}g(x)dx \\ \text{} \\ \\
+      \text{} \\$ <u>Additive Interval Property</u> $ \displaystyle \\ \text{}
+      \int_{a}^{b}f(x)dx = \int_{a}^{c}f(x)dx + \int_{c}^{b}f(x)dx \\ \text{} \\
+      F(x) + C $ is called the <u>most general antiderivative</u> $\\ \text{}
+      \\$ Indefinite Integral of f(x): $\displaystyle\int f(x)dx = F(x) + C \\
+      \text{} \\ \\ \text{} \\$ <u>Some Derivative Rules</u> $\\ \text{}
+      \displaystyle \text{Sum Rule: } \frac{d}{dx} [f(x)+g(x)] = f'(x) + g'(x)
+      \\ \text{} \\ \text{Difference Rule: }\frac{d}{dx}[f(x)-g(x)] =
+      f'(x)-g'(x) \\ \text{} \\ \text{Product Rule: } \frac{d}{dx}[f(x)g(x)] =
+      f'(x)g(x) + f(x)g'(x) \\ \text{} \\ \text{Quotient Rule: } \frac{d}{dx}
+      [\frac{f(x)}{g(x)}] = \frac{g(x)f'(x) - f(x)g'(x)}{[g(x)]^2}\\ \text{} \\$
+    </p>
+
+    <hr width="auto" size="1" />
+
+    <table style="width: 100%">
+      <tr>
+        <th>Integration Formulas (Like antiderivatives)</th>
+        <th>Differentiation Formulas</th>
+      </tr>
+      <tr>
+        <td>
+          <!--Integration Formulas-->
+          $ \\ \text{} \\\displaystyle \int 0 \space dx = C \\ \text{} \\ \int k
+          \space dx = kx + C \\ \text{} \\ \text{Power Rule:} \int X^n dx =
+          \frac{X^{n + 1}}{n + 1} + C, \space n \not = -1 \\ \text{} \\ \int
+          kf(x) dx = k \int f(x) dx \\ \text{} \\ \int [f(x) ± g(x)]dx = \int
+          f(x)dx ± \int g(x) dx \\ \text{} \\ \int \cos x \space dx = \sin
+          \space x + C \\ \text{} \\ \int \sin x \space dx = -\cos x + C \\
+          \text{} \\ \int \sec^2x \space dx = \tan x + C \\ \text{} \\ \int \sec
+          x \tan x \space dx = \sec x + C \\ \text{} \\ \int \csc^2x \space dx =
+          -\cot x + C \\ \text{} \\ \int \csc x \cot x \space dx = -\csc x + C
+          \\ \text{} \\$
+        </td>
+        <td>
+          <!--Differtiation Formula-->
+          $ \\ \text{} \\ \displaystyle \text{Constant Rule: }\frac{d}{dx}[C] =
+          0 \\ \text{} \\ \frac{d}{dx}[kx] = k \\ \text{} \\ \frac{d}{dx}[X^n] =
+          nx^{n-1} \\ \text{} \\ \text{Constant Multiple Rule: } \frac{d}{dx}
+          [kf(x)] kf'(x) \\ \text{} \\ \frac{d}{dx}[f(x)±g(x)]=f'(x)±g'(x) \\
+          \text{} \\ \frac{d}{dx}[\sin x] = \cos x \\ \text{} \\
+          \frac{d}{dx}[\cos x] = -\sin x \\ \text{} \\ \frac{d}{dx}[\tan x] =
+          \sec^2x \\ \text{} \\ \frac{d}{dx}[\sec x] = \sec x \tan x \\ \text{}
+          \\ \frac{d}{dx}[\cot x] = -\csc^2x \\ \text{} \\ \frac{d}{dx}[\csc x]
+          = -\csc x\cot x \\ \text{} \\$
+        </td>
+      </tr>
+    </table>
+
+    <hr width="auto" size="1" />
+
+    <table style="width: 100%">
+      <tr>
+        <th>Exponential/Log Derivatives</th>
+        <th>Trig Derivatives</th>
+        <th>Inverse Trig Derivatives</th>
+        <th>Hyperbolic Derivatives</th>
+      </tr>
+      <tr>
+        <td>
+          <!--Exponential/Log Derivatives-->
+          $\\ \text{} \\ \displaystyle \frac{d}{dx}c = 0 \\ \text{} \\
+          \frac{d}{dx}x = 1 \\ \text{} \\ \frac{d}{dx} x^n = nx^{(n-1)} \\
+          \text{} \\ (e^x)' = e^x \\ \text{} \\ (a^x)' = a^x \ln a \\ \text{} \\
+          (\log_ax)' = \frac{1}{x \ln a} \\ \text{} \\ (\ln x)' = \frac{1}{x} \\
+          \text{} \\$
+        </td>
+        <td>
+          <!--Trig Derivatives-->
+          $\\ \text{} \\ \displaystyle \frac{d}{dx}\sin x = \cos x \\ \text{} \\
+          \frac{d}{dx}\cos x = -\sin x \\ \text{} \\ \frac{d}{dx}\tan x =
+          \sec^2x \\ \text{} \\ \frac{d}{dx}\csc x = -\csc x \cot x \\ \text{}
+          \\ \frac{d}{dx}\sec x = \sec x \tan x \\ \text{} \\ \frac{d}{dx}\cot x
+          = -\csc^2x \\ \text{} \\$
+        </td>
+        <td>
+          <!--Inverse Trig Derivatives-->
+          $\\ \text{} \\ \displaystyle \frac{d}{dx}\arcsin x = \frac{1}{\sqrt{(1
+          - x^2)}} \\ \text{} \\ \frac{d}{dx}\arccos x =
+          \frac{-1}{\sqrt{(1-x^2)}} \\ \text{} \\ \frac{d}{dx}\arctan x =
+          \frac{1}{1 + x^2} \\ \text{} \\ \frac{d}{dx}\csc^{-1} x =
+          \frac{-1}{|x|\sqrt{(x^2-1)}} \\ \text{} \\ \frac{d}{dx}\sec^{-1} x =
+          \frac{1}{|x|\sqrt{(x^2-1)}} \\ \text{} \\ \frac{d}{dx}\cot^{-1} x =
+          \frac{-1}{1 + x^2} \\ \text{} \\$
+        </td>
+        <td>
+          <!--Hyperbolic Derivatives-->
+          $\\ \text{} \\ \displaystyle \frac{d}{dx}\sin h \space x = \cos h
+          \space x \\ \text{} \\ \frac{d}{dx} \cos h \space x = \cos h \space x
+          \\ \text{} \\ \frac{d}{dx}\tan h \space x = 1 - \tan h^2x \\ \text{}
+          \\ \frac{d}{dx}\csc h \space x = -\cot h \space x \csc h \space x \\
+          \text{} \\ \frac{d}{dx}\sec h \space x = -\tan h \space x \sec h
+          \space x \\ \text{} \\ \frac{d}{dx} \cot h \space x = 1 - \cot h^2x \\
+          \text{} \\$
+        </td>
+      </tr>
+    </table>
+
+    <hr width="auto" size="1" />
+
+    <style>
+      .heading2 {
+        text-align: center;
+      }
+      .Left {
+        margin-left: 50px;
+      }
+      .Middle {
+        text-align: center;
+      }
+      th {
+        text-align: left;
+        font-size: 20px;
+        padding: 5px;
+      }
+      table {
+        margin: 5px;
+      }
+    </style>
     <script>
       function retheme() {
         var cc = document.body.className;
